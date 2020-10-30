@@ -1,0 +1,8 @@
+<ul class="list-unstyled">
+  <% favorites.each do |favorite| %>
+    <div>
+      <p><%= favorite.content %></p>
+    </div>
+  <% end %>
+  <%= paginate favorites %>
+</ul>
