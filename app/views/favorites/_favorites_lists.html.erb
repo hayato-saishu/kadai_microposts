@@ -6,6 +6,11 @@
       <div>
         <p><%= like.content %></p>
       </div>
+      <div class="row">
+        <% if user_signed_in? %>
+          <%= render 'favorites/favorite_button', micropost: like %>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <%= paginate likes %>
