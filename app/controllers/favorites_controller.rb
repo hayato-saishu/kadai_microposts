@@ -15,5 +15,10 @@ class FavoritesController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
   
+  def index
+    @user = User.find(params[:id])
+    @likes = @user.likes.order(id: :desc).page(params[:page])
+  end
+
 
 end
