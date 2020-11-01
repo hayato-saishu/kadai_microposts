@@ -1,0 +1,11 @@
+  <% likes.each do |like| %>
+    <div class="media-body">
+      <div>
+        <%= link_to like.user.name, user_path(like.user) %>
+      </div>
+      <div>
+        <p><%= like.content %></p>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate likes %>

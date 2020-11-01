@@ -14,4 +14,6 @@ class FavoritesController < ApplicationController
     flash[:success] = '投稿のライクを解除しました。'
     redirect_back(fallback_location: root_path)
   end
+  
+
 end
